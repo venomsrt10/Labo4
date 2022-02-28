@@ -1,0 +1,26 @@
+<div class="main-div">
+
+    <mat-card class="mat-elevation-z5">
+        <mat-form-field>
+        <mat-card-title>Celsius </mat-card-title>
+      <input matInput name="cel" type="text" [(ngModel)]="cel" (input)="celToFahr()"> 
+      <button *ngIf="cel || fahr" matSuffix mat-icon-button aria-label="Clear" (click)="cel = 0 || fahr = 0">
+        <mat-icon>close</mat-icon>
+      </button>
+    </mat-form-field>
+    <br>
+    <mat-icon>wb_cloudy</mat-icon>
+<mat-icon>wb_sunny</mat-icon><mat-icon>invert_colors</mat-icon><mat-icon>line_style</mat-icon>
+
+
+
+    <br>
+    <mat-form-field> 
+        <mat-card-title>Fahrenheit</mat-card-title>
+      <input matInput name="cad" [(ngModel)]="fahr" (input)="fahrToCel()">
+      <button *ngIf="fahr || cel" matSuffix mat-icon-button aria-label="Clear" (click)="fahr = 0 || cel = 0">
+        <mat-icon>close</mat-icon>
+      </button>
+    </mat-form-field>
+  </mat-card>
+</div>

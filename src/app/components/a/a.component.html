@@ -1,0 +1,26 @@
+<div class="main-div">
+
+    <mat-card class="mat-elevation-z5">
+        <mat-form-field>
+        <mat-card-title>Kilomètres</mat-card-title>
+      <input matInput name="km" type="text" [(ngModel)]="km" (input)="kmToMi()"> 
+      <button *ngIf="km || mi" matSuffix mat-icon-button aria-label="Clear" (click)="km = 0 || mi = 0">
+
+        <mat-icon>close</mat-icon>
+      </button>
+    </mat-form-field>
+    <br>
+    <mat-icon> directions_car</mat-icon> <mat-icon> directions_railway</mat-icon><mat-icon> directions_bike</mat-icon><mat-icon> directions_walk</mat-icon>
+
+
+
+    <br>
+    <mat-form-field> 
+        <mat-card-title>Miles</mat-card-title>
+      <input matInput name="mi" [(ngModel)]="mi" (input)="miToKm()">
+      <button *ngIf="mi || km" matSuffix mat-icon-button aria-label="Clear" (click)="mi = 0 || km = 0">
+        <mat-icon>close</mat-icon>
+      </button>
+    </mat-form-field>
+  </mat-card>
+</div>

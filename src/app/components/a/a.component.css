@@ -1,0 +1,9 @@
+.main-div{
+  height: 40vh;
+  display:ruby;
+  justify-content: center;
+  align-items: center;
+}
+mat-card{
+  width:fit-content;
+}
